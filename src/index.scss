@@ -1,0 +1,21 @@
+$mainColor: rgb(230, 6, 6);
+$font: Arial, sans-serif;
+
+@mixin reset{
+    margin: 0;
+    padding:0;
+}
+
+body{
+font-family: $font;
+}   
+nav{
+    ul{
+        li{
+            a{
+                color: $mainColor;
+                text-decoration:none;
+            }
+        }
+    }
+}
