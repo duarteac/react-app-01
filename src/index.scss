@@ -1,6 +1,7 @@
 $mainColor: rgb(230, 6, 6);
 $font: Arial, sans-serif;
 
+
 @mixin reset{
     margin: 0;
     padding:0;
@@ -8,14 +9,48 @@ $font: Arial, sans-serif;
 
 body{
 font-family: $font;
+
 }   
-nav{
-    ul{
-        li{
-            a{
-                color: $mainColor;
-                text-decoration:none;
+.main{
+    display: grid;
+    grid-template-areas:'header header header header'
+    'aside section section section '
+    'footer footer footer footer';
+}
+.header{
+    grid-area: header;
+    .nav{
+        .menu{
+            display: flex;
+
+            .list-menu{
+                @include reset();
+             list-style-type: none;
+             padding-left: 10px;
+                .list-menu-item{
+                   color: #900;
+                   text-decoration: none;
+                   transition: color 1s;
+                }
+                .list-menu-item:hover{
+                  color :#900;
+                }
             }
         }
     }
+
+}
+.section{
+grid-area: section;
+}
+.aside{
+    grid-area: aside;
+    .menu{
+        .list-menu{
+
+        }
+    }
+}
+.footer{
+grid-area: footer
 }
