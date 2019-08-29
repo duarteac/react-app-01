@@ -9,14 +9,14 @@ function App() {
     <div>
      <nav className="nav">
        <ul className="menu">
-         <li className="list-menu">
-         <a href= "#" className="list-menu-link" >home </a>
+         <li className="menu-item">
+         <a href= "#" className="menu-item-link" >home </a>
          </li>
-         <li className="list-menu">
-         <a href= "#"  className="list-menu-link">about </a>
+         <li className="menu-item">
+         <a href= "#"  className="menu-item-link">about </a>
          </li>
-         <li className="list-menu">
-         <a href= "#"  className="list-menu-link">contact </a>
+         <li className="menu-item">
+         <a href= "#"  className="menu-item-link">contact </a>
          </li>
        </ul>
      </nav>
@@ -24,13 +24,18 @@ function App() {
     </header>
     <aside className="aside">
       <ul className="menu">
-        <li className="list-menu"><h2>lo mas comentado</h2></li>
-        <li className="list-menu"><h2>lo mas visto</h2></li>
+        <li className="menu-item"><h2>lo mas comentado</h2></li>
+        <li className="menu-item"><h2>lo mas visto</h2></li>
       </ul>
     </aside>
 
     <section className="section">
 
+    <h2>Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            
     </section>
 
     <footer className="footer">

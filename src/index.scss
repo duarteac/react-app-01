@@ -19,21 +19,23 @@ font-family: $font;
 }
 .header{
     grid-area: header;
+    height:100px;
     .nav{
         .menu{
+            @include reset();
             display: flex;
 
-            .list-menu{
+            .menu-item{
                 @include reset();
              list-style-type: none;
              padding-left: 10px;
-                .list-menu-item{
+                .menu-item-link{
                    color: #900;
                    text-decoration: none;
-                   transition: color 1s;
+                   transition: color 0.5s;
                 }
-                .list-menu-item:hover{
-                  color :#900;
+                .menu-item-link:hover{
+                  color :#000;
                 }
             }
         }
@@ -41,16 +43,25 @@ font-family: $font;
 
 }
 .section{
+background: rgba(212,228,239, 1);
 grid-area: section;
+height: calc(100vh - 150px);
 }
 .aside{
     grid-area: aside;
     .menu{
-        .list-menu{
-
+        @include reset();
+        .menu-item{
+            @include reset();
+            list-style-type: none;
         }
     }
 }
 .footer{
-grid-area: footer
+background: rgba(212,228,239, 1);
+grid-area: footer;
+height: 50px;
+    .copyright{
+        text-align: center;
+    }
 }
