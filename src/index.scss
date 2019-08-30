@@ -1,62 +1,96 @@
+//variables//
 $mainColor: rgb(230, 6, 6);
 $font: Arial, sans-serif;
 
-
+//mixis//
 @mixin reset{
     margin: 0;
     padding:0;
 }
+//general//
 
+
+//clases//
 body{
 font-family: $font;
 
 }   
 .main{
-    display: grid;
-    grid-template-areas:'header header header header'
-    'aside section section section '
-    'footer footer footer footer';
+  
 }
 .header{
-    grid-area: header;
-    height:100px;
+    background:#FFF;
+    height:100vh ;
+    position: relative;
     .nav{
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,493)100%);
+        height: 80px;
+        width: 100%;
+      
         .menu{
             @include reset();
             display: flex;
-
+            position: fixed;
+            right: 50px;
+            top: 30px;
+            
             .menu-item{
                 @include reset();
+                border-right: 1px solid #dedede;
              list-style-type: none;
-             padding-left: 10px;
+             
                 .menu-item-link{
-                   color: #900;
+                   color: #999;
+                   padding: 20px 10px;
                    text-decoration: none;
-                   transition: color 0.5s;
+                   transition: all 0.5s;
                 }
                 .menu-item-link:hover{
-                  color :#000;
+                    background: #999;
+                  color :#FFF;
                 }
             }
         }
     }
+    .main-info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        .title{
+            color :rgb(51,31,32);
+            font-size: 32px;
+            font-weight: bold;
+            .title-light{
+                color :#AAA;    
+            }
 
+        }
+        .subline{
+            font-size: 10px;
+            text-transform: uppercase;
+    
+        }
+
+    }
+    
 }
 .section{
 background: rgba(212,228,239, 1);
-grid-area: section;
-height: calc(100vh - 150px);
+// grid-area: section;
+// height: calc(100vh - 150px);
+
 }
-.aside{
-    grid-area: aside;
-    .menu{
-        @include reset();
-        .menu-item{
-            @include reset();
-            list-style-type: none;
-        }
-    }
-}
+// .aside{
+//     grid-area: aside;
+//     .menu{
+//         @include reset();
+//         .menu-item{
+//             @include reset();
+//             list-style-type: none;
+//         }
+//     }
+// }
 .footer{
 background: rgba(212,228,239, 1);
 grid-area: footer;
@@ -64,4 +98,27 @@ height: 50px;
     .copyright{
         text-align: center;
     }
+}
+//elementos genericos //
+.form{
+    .buttom{
+        background: #333;
+        color: #FFF;
+        cursor: pointer;
+        height: 60px;
+        text-transform: uppercase;
+        width: 120px;
+        border: none;
+        border-radius:10px ;
+
+    }
+    .buttom:hover{
+        opacity: 0.7;
+    }
+    .buttom-green{
+        background: rgb(27, 95, 27);
+    }
+}
+.form-header{
+
 }
